@@ -43,6 +43,14 @@ A model created to detection face in a image or video. trained on custom dataset
    >
    > from tensorflow.keras.applications import VGG16
 
+   It is pre-trained model which has kwnoeldge we can use for out task. when i am saying knowlege i mean weight, filters, layers etc. but we need to tweak it a little bit what we need to is removing the end layer of the model and adding 2 of our layers classification and regression. to do that we have to do something like this :
+   
+   '''
+   vgg = VGG16(include_top = False)
+   '''
+   
+   
+
 
        object detection model is 2 diff model - one is classification (what the object is) and 2nd regression model trying to estimate the coordinates of a bounding box (need 2 coordinates to draw a box topleft or topright and bottom left or bottom right )
        
