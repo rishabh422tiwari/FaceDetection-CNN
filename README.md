@@ -32,6 +32,8 @@ A model created to detection face in a image or video. trained on custom dataset
     
 ## 2. Training deep learning model
    
+   First we need to split our data into three parts train, val and test. why? we will teach our model on train data then to tune the model will test it on validation set and when if it performs well on val set and we test it on test set which is vital because it has never seen that data.  
+   
    Now we need our data to be passed in Convolutional Neural Network. remember here we are dealing with two problems one is **Binary Classification which will predict if there is a face in the image** ( not face - 0 , face - 1) and second is **regression problem which will predict the co-ordinates of the bounding boxes**. so we will use *VGG16* which is laready been trained on tons of data so we can use knowledge of that problem ( also called Transfer Learning )and tweak a little bit and add layers one for classification and regression.
    
    Also we need only 2 coordinates to draw or predict a box *topleft or topright and bottom left or bottom right.*
@@ -62,17 +64,27 @@ A model created to detection face in a image or video. trained on custom dataset
   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/regression%20loss%20function.png)
   
   only difference is we not squaring the whole.
-Localization
-  Please refer to this code for loss function to get clear understanding :
   
-  ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/localization.png)
+  ## Train the model, apply gradient descent and reduce the loss
+   
+   we break our data into batches of 8 images that means it will take every batch for one time for each epoch and try to reduce loss and make our predictions better. i have set epoch number to 40 i.e for each epoch it will go over every batch 40 times. 
+   
+   Plotting the losses classification and regression during the training :
+   
+   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/loss%20plot.png)
+   
+   See we have little plunging and rise in the loss but at last we were able to reduce the loss pretty much.
   
-  
-  
-       losses - classification component - binary cross entropy
-              - localization loss - keras function api
-              
-       vgg16 - pretrained - adding the final 2 layers - 1 for class and 1 for regression
+### Now Make the Prediction 
+   
+   The out we get for any image will be of two dict class : [0,1] and regression : [x1,y1,x2,y2].
+   
+   Prediction would look something like this :
+   
+   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/prediction.png)
+   
+   *** Tip : Always take input and Visualize output then tweak or fine tune the intermediate layers ***
+   
        
        
       5 output - class [0,1], regression [x1,y1,x2,y2]
