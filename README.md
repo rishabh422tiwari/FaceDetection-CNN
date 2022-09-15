@@ -4,9 +4,9 @@ A model created to detection face in a image or video. trained on custom dataset
 
 ## 1. Image Collection
       
-      ### First take a picture for our dataset with the help of **CV2** package
-          > pip install opencv-python
-          > import cv2
+   ### First take a picture for our dataset with the help of **CV2** packag
+   > pip install opencv-python
+   > import cv2
           
       
 
