@@ -53,9 +53,22 @@ A model created to detection face in a image or video. trained on custom dataset
    
    ### Define lossed for our classificatipn regression :
    
-   In Image classification `Binary cross entropy` loss is pretty common so we will use that and for regression we create our own loss which will be based on this formula :
+   In Image classification `Binary cross entropy` loss is pretty common so we will use that.
+   
+     classloss = tf.keras.losses.BinaryCrossentropy()
+   
+   For regression we create our own loss which will be based on this formula  which is called `localization loss`:
    
   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/regression%20loss%20function.png)
+  
+  only difference is we not squaring the whole.
+Localization
+  Please refer to this code for loss function to get clear understanding :
+  
+  ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/localization.png)
+  
+  
+  
        losses - classification component - binary cross entropy
               - localization loss - keras function api
               
