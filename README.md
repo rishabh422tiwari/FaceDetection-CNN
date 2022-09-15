@@ -49,7 +49,7 @@ A model created to detection face in a image or video. trained on custom dataset
    vgg = VGG16(include_top = False)
    ```
    
-   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/vgg16.png"Optional title")
+   ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/vgg16.png)
    
 
 
