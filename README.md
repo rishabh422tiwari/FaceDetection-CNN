@@ -6,6 +6,7 @@ A model created to detection face in a image or video. trained on custom dataset
       
    ### First take a picture for our dataset with the help of **CV2** packag
    > pip install opencv-python
+   
    > import cv2
           
       
