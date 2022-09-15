@@ -12,6 +12,11 @@ A model created to detection face in a image or video. trained on custom dataset
    To take make our dataset little more diverse i have changed background and t-shirts otherwise it will be very easy task for our model to predict the face.
    ![This is an image](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/labelme%20image.png)
    
+   ### Giving our images label and coordinates of bounding box 
+   > pip install labelme
+   
+   It will create label for each of our image and coordinates which contains face in the image. so it will be of dictionary type and contain like the following label : [0,1], coordinate : [45,67 ,432, 523].
+   
    ### Now Perform Data Augmentation
    > pip install -U albumentations
 
