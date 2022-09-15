@@ -12,10 +12,10 @@ A model created to detection face in a image or video. trained on custom dataset
    To take make our dataset little more diverse i have changed background and t-shirts otherwise it will be very easy task for our model to predict the face.
    ![This is an image](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/labelme%20image.png)
    
-   ### Giving our images label and coordinates of bounding box 
+   ### Giving our images label and coordinates of bounding boxes 
    > pip install labelme
    
-   It will create label for each of our image and coordinates which contains face in the image. so it will be of dictionary type and contain like the following label : [0,1], coordinate : [45,67 ,432, 523].
+   It will create label for each of our image and coordinates which contains face in the image. so it will be of dictionary type and contain like the following label : [0,1], coordinate : [45,67 ,432, 523]. *saving it under a JSON file*
    
    ### Now Perform Data Augmentation
    > pip install -U albumentations
@@ -28,16 +28,12 @@ A model created to detection face in a image or video. trained on custom dataset
    ![This is an image](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/Augmented%20image.png)
       
 
-
-
-
-
-
-    using webcam collect imgaes
-    annotate images i.e bounding boxes LabelMe
-    data augmentation augmentation - random crop, brightness, flip, gamma
     
-2. Training deep learning model
+## 2. Training deep learning model
+   
+   ###  
+
+
        object detection model is 2 diff model - one is classification (what the object is) and 2nd regression model trying to estimate the coordinates of a bounding box (need 2 coordinates to draw a box topleft or topright and bottom left or bottom right )
        
        losses - classification component - binary cross entropy
