@@ -45,9 +45,9 @@ A model created to detection face in a image or video. trained on custom dataset
 
    It is pre-trained model which has kwnoeldge we can use for out task. when i am saying knowlege i mean weight, filters, layers etc. but we need to tweak it a little bit what we need to is removing the end layer of the model and adding 2 of our layers classification and regression. to do that we have to do something like this :
    
-   '''
+   ```
    vgg = VGG16(include_top = False)
-   '''
+   ```
    
    
 
