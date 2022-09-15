@@ -3,6 +3,18 @@
 A model created to detection face in a image or video. trained on custom dataset curated with the help of **LabelMe, Augmentation and cv2**. In order to create data pipeline and the training of the model i have used **tensorflow** sequention API.
 
 ## 1. Image Collection
+      
+      ### First take a picture for our dataset with the help of **CV2** package
+          > pip install opencv-python
+          > import cv2
+          
+      
+
+
+
+
+
+
     using webcam collect imgaes
     annotate images i.e bounding boxes LabelMe
     data augmentation augmentation - random crop, brightness, flip, gamma
