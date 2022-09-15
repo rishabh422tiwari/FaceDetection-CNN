@@ -42,8 +42,8 @@ A model created to detection face in a image or video. trained on custom dataset
    >from tensorflow.keras.layers import Input, Conv2D, Dense, GlobalMaxPooling2D
    >
    > from tensorflow.keras.applications import VGG16
-
-   It is pre-trained model which has kwnoeldge we can use for out task. when i am saying knowlege i mean weight, filters, layers etc. but we need to tweak it a little bit what we need to is removing the end layer of the model and adding 2 of our layers classification and regression. to do that we have to do something like this :
+   
+   It is pre-trained model and it contains layers like `Convolution, max pooling, fully connected` and it has Total params: 14,714,688 which has kwnoeldge we can use for our task. when i am saying knowlege i mean weight, filters, layers etc. but we need to tweak it a little bit what we need to is removing the end layer of the model and adding 2 of our layers classification and regression. to do that we have to do something like this :
    
    ```
    vgg = VGG16(include_top = False)
@@ -51,10 +51,11 @@ A model created to detection face in a image or video. trained on custom dataset
    
    ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/vgg16.png)
    
-
-
-       object detection model is 2 diff model - one is classification (what the object is) and 2nd regression model trying to estimate the coordinates of a bounding box (need 2 coordinates to draw a box topleft or topright and bottom left or bottom right )
-       
+   ### Define lossed for our classificatipn regression :
+   
+   In Image classification `Binary cross entropy` loss is pretty common so we will use that and for regression we create our own loss which will be based on this formula :
+   
+  ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/regression%20loss%20function.png)
        losses - classification component - binary cross entropy
               - localization loss - keras function api
               
