@@ -21,6 +21,7 @@ A model created to detection face in a image or video. trained on custom dataset
    > pip install -U albumentations
 
    > import albumentations as alb
+   
    Initially i had captured 150 images but look often Computer vision problem or deep learning model need plenty of data to be trained on and give us good results so that is what we are doing augmentating images. Augmenting images means taking **Random Crops, Horizontal Flips, Random brightness contrast, gamma etc** of images that way we don't need to spend our resource to collect data. my images which was *initially 150 now after augmentation is now almost 5000.* 
    
    This is sample images after applying augmentation
