@@ -8,6 +8,8 @@ A model created to detection face in a image or video. trained on custom dataset
    > pip install opencv-python
    
    > import cv2
+
+   To take make our dataset little more diverse i have changed background and t-shirts otherwise it will be very easy task for our model to detect the face.
           
       
 
