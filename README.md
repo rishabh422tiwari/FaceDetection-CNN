@@ -4,7 +4,7 @@ A model created to detection face in a image or video. trained on custom dataset
 
 ## 1. Image Collection
       
-   ### First take a picture for our dataset with the help of **CV2** packag
+   ### First take a picture for our dataset with the help of **CV2** package
    > pip install opencv-python
    
    > import cv2
@@ -31,7 +31,14 @@ A model created to detection face in a image or video. trained on custom dataset
     
 ## 2. Training deep learning model
    
-   ###  
+   Now we need our data to be passed in Convolutional Neural Network. remember here we are dealing with two problems one is Binary Classification which will predict if there is a face in the image ( not face - 0 , face - 1) and second is regression problem which will predict the co-ordinates of the bounding boxes. so we will use VGG16 which is laready been trained on tons of data so we can use knowledge of that problem ( also called Transfer Learning )and tweak a little bit and add layers one for classification and regression.
+   
+   ### What is VGG16 Architecture ?
+   >from tensorflow.keras.models import Model
+   >
+   >from tensorflow.keras.layers import Input, Conv2D, Dense, GlobalMaxPooling2D
+   >
+   > from tensorflow.keras.applications import VGG16
 
 
        object detection model is 2 diff model - one is classification (what the object is) and 2nd regression model trying to estimate the coordinates of a bounding box (need 2 coordinates to draw a box topleft or topright and bottom left or bottom right )
