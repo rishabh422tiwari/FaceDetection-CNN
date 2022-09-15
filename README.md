@@ -6,7 +6,7 @@ A model created to detection face in a image or video. trained on custom dataset
       
    ### First take a picture for our dataset with the help of **CV2** package
    > pip install opencv-python
-   
+   > 
    > import cv2
 
    To take make our dataset little more diverse i have changed background and t-shirts otherwise it will be very easy task for our model to predict the face.
@@ -19,19 +19,22 @@ A model created to detection face in a image or video. trained on custom dataset
    
    ### Now Perform Data Augmentation
    > pip install -U albumentations
-
+   > 
    > import albumentations as alb
    
    Initially i had captured 150 images but look often Computer vision problem or deep learning model need plenty of data to be trained on and give us good results so that is what we are doing augmentating images. Augmenting images means taking **Random Crops, Horizontal Flips, Random brightness contrast, gamma etc** of images that way we don't need to spend our resource to collect data. my images which was *initially 150 now after augmentation is now almost 5000.* 
    
-   This is sample images after applying augmentation
+   This is sample images after applying augmentation:
+   
    ![This is an image](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/Augmented%20image.png)
       
 
     
 ## 2. Training deep learning model
    
-   Now we need our data to be passed in Convolutional Neural Network. remember here we are dealing with two problems one is Binary Classification which will predict if there is a face in the image ( not face - 0 , face - 1) and second is regression problem which will predict the co-ordinates of the bounding boxes. so we will use VGG16 which is laready been trained on tons of data so we can use knowledge of that problem ( also called Transfer Learning )and tweak a little bit and add layers one for classification and regression.
+   Now we need our data to be passed in Convolutional Neural Network. remember here we are dealing with two problems one is **Binary Classification which will predict if there is a face in the image** ( not face - 0 , face - 1) and second is **regression problem which will predict the co-ordinates of the bounding boxes**. so we will use *VGG16* which is laready been trained on tons of data so we can use knowledge of that problem ( also called Transfer Learning )and tweak a little bit and add layers one for classification and regression.
+   
+   Also we need only 2 coordinates to draw or predict a box *topleft or topright and bottom left or bottom right.*
    
    ### What is VGG16 Architecture ?
    >from tensorflow.keras.models import Model
