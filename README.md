@@ -1,6 +1,6 @@
 # Deep Face Detection
 
-A model created to detection face in a image or video. trained on custom dataset curated with the help of **LabelMe, Augmentation and cv2**. In order to create data pipeline and the training of the model i have used **tensorflow** sequention API.
+A model created to detection face in a image or video. trained on custom dataset curated with the help of **LabelMe, Augmentation and cv2**. This is a Computer vision problem so we need Convolutonal Neural Network to work with images and architecture we are going to use is widely used **VGG16**.  In order to create data pipeline and the training of the model i have used **tensorflow** sequention API.
 
 ## 1. Image Collection
       
