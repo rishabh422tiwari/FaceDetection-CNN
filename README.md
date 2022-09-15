@@ -83,10 +83,6 @@ A model created to detection face in a image or video. trained on custom dataset
    
    ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/prediction.png)
    
-   *** Tip : Always take input and Visualize output then tweak or fine tune the intermediate layers ***
+   ***Tip : Always take input and Visualize output then tweak or fine tune the intermediate layers***
    
-       
-       
-      5 output - class [0,1], regression [x1,y1,x2,y2]
-
-
+   
