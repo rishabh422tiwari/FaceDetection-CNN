@@ -53,7 +53,7 @@ A model created to detection face in a image or video. trained on custom dataset
    
    ![Alt text](https://github.com/rishabh422tiwari/FaceDetection-CNN/blob/main/images/vgg16.png)
    
-   ### Define lossed for our classificatipn regression :
+   ### Define losses for our classificatipn regression :
    
    In Image classification `Binary cross entropy` loss is pretty common so we will use that.
    
